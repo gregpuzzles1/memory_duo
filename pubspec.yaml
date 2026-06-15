@@ -30,6 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -62,6 +64,8 @@ flutter:
   assets:
     - assets/sounds/victory_chime.wav
     - assets/sounds/restart_chime.wav
+    - assets/sounds/echo_ambient.wav
+    - assets/images/echo-sequence-robot-mountains.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
