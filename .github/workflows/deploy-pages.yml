@@ -37,6 +37,9 @@ jobs:
       - name: Build web
         run: flutter build web --release --base-href /
 
+      - name: Copy index.html as 404.html for path URL strategy
+        run: cp build/web/index.html build/web/404.html
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
