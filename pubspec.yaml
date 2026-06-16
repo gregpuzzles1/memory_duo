@@ -66,6 +66,8 @@ flutter:
     - assets/sounds/restart_chime.wav
     - assets/sounds/echo_ambient.wav
     - assets/images/echo-sequence-robot-mountains.png
+    - assets/images/memory-duo-card.png
+    - assets/images/echo-sequence-card.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
