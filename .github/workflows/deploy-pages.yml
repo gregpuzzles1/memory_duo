@@ -4,13 +4,13 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
   build-and-deploy:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
     steps:
@@ -26,7 +26,7 @@ jobs:
         run: flutter pub get
 
       - name: Build web
-        run: flutter build web --release --base-href /
+        run: flutter build web --release --base-href / --pwa-strategy=none
 
       - name: Copy index.html as 404.html for path URL strategy
         run: cp build/web/index.html build/web/404.html
