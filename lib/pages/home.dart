@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:memory_duo/site_footer.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -157,11 +158,8 @@ class _HomePageState extends State<HomePage> {
                         icon: const Icon(Icons.play_arrow),
                         label: const Text('Start Game'),
                       ),
-                      const SizedBox(height: 24),
-                      Container(
-                        height: 160,
-                        color: Colors.white,
-                      ),
+                      const SizedBox(height: 20),
+                      const SiteFooter(),
                     ],
                   ),
                 ),
