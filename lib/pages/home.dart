@@ -28,7 +28,10 @@ class _HomePageState extends State<HomePage> {
   }
 
   KeyEventResult _handleKeyEvent(FocusNode node, KeyEvent event) {
-    if (event is! KeyDownEvent || !_scrollController.hasClients) {
+    if (event is! KeyDownEvent && event is! KeyRepeatEvent) {
+      return KeyEventResult.ignored;
+    }
+    if (!_scrollController.hasClients) {
       return KeyEventResult.ignored;
     }
 
